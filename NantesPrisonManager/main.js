@@ -4,8 +4,8 @@
  * and open the template in the editor.
  */
 
-const express = require('express');
-const path = require('path');
+import * as Express from "express";
+import * as Path from "path";
 const port = process.env['PORT'] || 8080;
 
 const app = express();
