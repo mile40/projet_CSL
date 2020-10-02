@@ -11,6 +11,18 @@ const port = process.env['PORT'] || 8080;
 const app = express();
 app.use(express.static('pages'));
 
+app.post('/', (req, res) => {
+    res.sendFile(path.join(__dirname + '/pages/index.html'));
+});
+
+app.post('/prisoniers', (req, res) => {
+    res.sendFile(path.join(__dirname + '/pages/prisoniers.html'));
+});
+
+app.post('/affaires', (req, res) => {
+    res.sendFile(path.join(__dirname + '/pages/affaires.html'));
+});
+
 app.listen(port);
 console.log('Server running, listening on port 8080');
 
