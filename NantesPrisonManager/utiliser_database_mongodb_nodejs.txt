@@ -1,0 +1,29 @@
+-- Pour windows --
+
+Telecharger MongoDB sur le site
+
+Installer
+
+Creer un dossier dans C:/data/db
+
+Ouvrir un terminal
+
+Aller dans Program Files/MongoDB/Server/[version]/bin
+
+Lancer le serveur avec la commande mongod
+
+Ouvrir un 2e terminal
+
+Aller dans Program Files/MongoDB/Server/[version]/bin
+
+Lancer le client avec la commande mongo
+
+Creer une base de données prison_nantes
+
+Creer une collection prisonners
+
+Inserer un truc
+
+Fermer client
+
+Lancer le serveur NodeJS => la console serveur affiche 'Connected to DB prison_nantes'
