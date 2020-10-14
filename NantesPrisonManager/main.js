@@ -33,3 +33,7 @@ mongoClient.connect(url, (err, db) => {
 
 app.listen(port);
 console.log('Server running, listening on port 8080');
+
+app.get('/', (request, response) => { // Test: 'curl http://localhost:1963/'
+    response.send('<h1 style="color: green;">"GPAO.Node.js.ts": Restful Web services, test</h1>');
+});
