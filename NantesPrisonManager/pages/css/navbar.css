@@ -10,4 +10,6 @@ and open the template in the editor.
 
 #navbar{
     display: flex;
+    margin-bottom: 20px;
+    border-bottom: 2px solid black;
 }
