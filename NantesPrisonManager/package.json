@@ -12,6 +12,8 @@
     "contributors": [],
     "dependencies": {
         "express": "^4.17.1",
-        "mongodb": "^3.6.2"
+        "mongodb": "^3.6.2",
+        "prisoners_module": "file:my_modules/prisoners_module",
+        "promise": "^8.1.0"
     }
 }
