@@ -74,6 +74,9 @@ async function del(prisoner){
 router.post('/create', (req, res) =>{
   create(req.body)
   .then((out) => {
+    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE, OPTIONS');
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
     if(out) res.sendStatus(200);
     else res.sendStatus(400);
   })
@@ -82,7 +85,9 @@ router.post('/create', (req, res) =>{
 router.get('/read', (req,res) => {
   read({},{projection:{_id: 0 }})
   .then((data) => {
-    res.header('Access-Control-Allow-Origin', 'http://localhost:3000');
+    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE, OPTIONS');
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
     res.status(200).json({'result': data});
   });
 });

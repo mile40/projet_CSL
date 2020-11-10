@@ -19,9 +19,12 @@ app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-
 app.use('/prisoners', prisonersModule);
-app.use(cors());
+app.use(cors({
+    origin: 'http://localhost:3000',
+    methods: "GET, PUT, POST, DELETE, OPTIONS",
+    allowedHeaders:"Content-Type"
+}));
 
 app.listen(port);
 console.log('Server running, listening on port 8080');
